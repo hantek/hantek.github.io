@@ -7,17 +7,21 @@ $(window).on('scroll', function() {
     //获取遍历a标签找到hash值
     $('.header-content li a').each(function(index, ele) {
         // 页面最后一个a不是高亮的内容,所以直接跳出函数
-        if (index == $('.header-content li a').length - 1) {
-            return;
-        }
+        // if (index == $('.header-content li a').length - 1) {
+        //     return;
+        // }
         // 获取hash值
+
         var target = $(this).prop('hash');
         var windowH = $(window).height()
-        console.log('clickFlag', clickFlag)
-            // 判断section距离页面的高度与页面滚动高度比较
-            // if ($(target).offset().top - pageScrollTop < 0) {
-            // if ($(target).offset().top - pageScrollTop < 60) {
-        if ($(target).offset().top - pageScrollTop < (windowH / 2 - 30)) {
+
+        // console.log('clickFlag', $(target).get(0).id, clickFlag)
+        if ($(target).get(0).id === 'publications') {
+            console.log('$(target).offset().top - pageScrollTop', $(target).offset().top - pageScrollTop)
+        }
+        // 判断section距离页面的高度与页面滚动高度比较
+        // if ($(target).offset().top - pageScrollTop < 0) {
+        if ($(target).offset().top - pageScrollTop < 80) {
             if (!clickFlag) {
                 // 给对应的li高亮操作
                 $(this).parent().parent().siblings().removeClass('active');
@@ -41,8 +45,8 @@ function scrollHighLight() {
 
         //将页面动画滚动到指定位置
         $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 500);
+            scrollTop: $(target).offset().top - 80
+        }, 0);
         // setTimeout(() => {
         clickFlag = true
         $(this).siblings().removeClass('active');
