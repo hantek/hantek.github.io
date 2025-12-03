@@ -217,6 +217,38 @@
                 </p>
 
                 <section class="research-section">
+                    <!-- Memory Decoder -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <img width="100%" src="./assets/research/memdec-intro.png" alt="" srcset="">
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <h4>
+                                Memory Decoder: A Pretrained, Plug-and-Play Memory for Large Language Models
+                            </h4>
+                            <p class="author">
+                                Jiaqi Cao*, Jiarui Wang*, Rubin Wei, Qipeng Guo, Kai Chen, Bowen Zhou, <span style="font-weight: 500;">Zhouhan Lin#</span>
+                            </p>
+                            <div class="link-list">
+                                <span>NeurIPS 2025 (Poster) </span>
+                                <span> | </span>
+                                <a href="https://www.arxiv.org/pdf/2508.09874"><span>pdf</span></a>
+                                <span> | </span>
+                                <a href="https://github.com/LUMIA-Group/MemoryDecoder/tree/main"><span>codes</span></a>
+                                <span> | </span>
+                                <a href="https://huggingface.co/collections/Clover-Hill/memorydecoder"><span>checkpoints</span></a>
+                                <span> | </span>
+                                <a href="https://www.qbitai.com/2025/08/323458.html"><span>量子位</span></a>
+                            </div>
+                            <abstract>
+                                We propose Memory Decoder, a plug-and-play pretrained memory that enables efficient domain adaptation without changing the original model’s parameters. Memory Decoder employs a small transformer decoder that learns to 
+                                imitate the behavior of an external non-parametric retriever. Once trained, Memory Decoder can be seamlessly integrated with any pretrained language model that shares the same tokenizer, requiring no model-specific modifications.
+                                Experimental results demonstrate that Memory Decoder enables effective adaptation of various Qwen and Llama models to three distinct specialized domains: biomedicine, finance, and law, reducing perplexity by an average of 6.17 points. 
+                                Overall, Memory Decoder introduces a novel paradigm centered on a specially pretrained memory component designed for domain-specific adaptation. This memory architecture can be integrated in a plug-and-play manner, 
+                                consistently enhancing performance across multiple models within the target domain.
+                        </div>
+                    </div>
+                    
                     <!-- research 1 -->
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
