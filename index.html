@@ -220,6 +220,33 @@
                     <!-- research 1 -->
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
+                            <img width="100%" src="./assets/research/anchor.png" alt="" srcset="">
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <h4>
+                                Training LLMs to be Better Text Embedders through Bidirectional Reconstruction
+                            </h4>
+                            <p class="author">
+                                Chang Su, Dengliang Shi, Siyuan Huang, Jintao Du, Changhua Meng, Yu Cheng, Weiqiang Wang, <span style="font-weight: 500;">Zhouhan Lin#</span>
+                            </p>
+                            <div class="link-list">
+                                <span>EMNLP 2025 (Main Conference) </span>
+                                <span> | </span>
+                                <a href="https://aclanthology.org/2025.emnlp-main.216.pdf"><span>pdf</span></a>
+                                <span> | </span>
+                                <a href="https://github.com/LUMIA-Group/Anchor-Embedding"><span>codes</span></a>
+                            </div>
+                            <abstract>
+                                We propose a simple yet effective approach to enhance the semantic representation of the final token embedding in large language models (LLMs) for text embedding tasks. Existing LLM-based embedding methods often rely on the embedding of a reserved token such as [EOS],
+                                which is not explicitly trained to capture the full context semantics, limiting its effectiveness for retrieval and re-ranking. Our method introduces an additional training stage prior to contrastive learning, employing 
+                                bidirectional generative reconstruction tasks—EBQ2D (Embedding-Based Query-to-Document) and EBD2Q (Embedding-Based Document-to-Query)—to anchor the [EOS] embedding and reconstruct both sides of query-document pairs. 
+                                Experimental results show that our approach significantly improves LLM performance on the Massive Text Embedding Benchmark (MTEB), achieving new state-of-the-art results across multiple LLM base models and scales.
+                        </div>
+                    </div>
+
+                    <!-- research 1 -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
                             <img width="100%" src="./assets/research/fouriertransformer.png" alt="" srcset="">
                         </div>
                         <div class="col-xs-12 col-sm-8">
