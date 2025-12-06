@@ -148,7 +148,7 @@
                     Research
                 </h3>
                 <p>
-                    My core research interest is <span style="font-weight: 500;">to explore and develop machine intelligence capable of acquiring, forming, reasoning, and interacting with abstract concepts</span> from large amounts of data，
+                    My core research interest is <span style="font-weight: 500;">to explore and develop machine intelligence capable of acquiring, forming, reasoning, and interacting with abstract concepts</span> from large amounts of data,
                     especially through self-supervised learning. 
                     Almost all of my research efforts are centered around this goal, touching on a diverse range of topics such as attention mechanisms, language modeling, dialog systems, automated summarization, grammar induction, 
                     graph neural networks, code generation, etc. A list of topics that I am interested in at the moment are:
@@ -212,8 +212,11 @@
                     Selected Publications
                 </h3>
                 <p>
-                    <span style="font-weight: 500;">This is a selected list of my publications. For an up-to-date, complete list, please refer to 
-                        <a href="https://scholar.google.com/citations?user=LNZ4efwAAAAJ&hl=en">my Google Scholar page</a>. </span>
+                    <span style="font-weight: 500;">This is a selected list of my publications. </span>
+                </p>
+                <p>
+                    <span style="font-weight: 500;">For an up-to-date, complete list, please refer to 
+                    <a href="https://scholar.google.com/citations?user=LNZ4efwAAAAJ&hl=en">my Google Scholar page</a>. </span>
                 </p>
                 <p>
                     <span style="font-weight: 500;">(*) indicates equal contribution. (#) indicates the corresponding author. </span>
@@ -233,7 +236,7 @@
                                 Jiaqi Cao*, Jiarui Wang*, Rubin Wei, Qipeng Guo, Kai Chen, Bowen Zhou, <span style="font-weight: 500;">Zhouhan Lin#</span>
                             </p>
                             <div class="link-list">
-                                <span>NeurIPS 2025 (Poster) </span>
+                                <span>NeurIPS 2025 </span>
                                 <span> | </span>
                                 <a href="https://www.arxiv.org/pdf/2508.09874"><span>pdf</span></a>
                                 <span> | </span>
@@ -247,15 +250,31 @@
                                 <span> | </span>
                                 <a href="https://www.bilibili.com/video/BV1uGkZBUE1F"><span>bilibili</span></a>
                             </div>
-                            <abstract>
-                                We propose Memory Decoder, a plug-and-play pretrained memory that enables efficient domain adaptation without changing the original model’s parameters. Memory Decoder employs a small transformer decoder that learns to 
-                                imitate the behavior of an external non-parametric retriever. Once trained, Memory Decoder can be seamlessly integrated with any pretrained language model that shares the same tokenizer, requiring no model-specific modifications.
-                                Experimental results demonstrate that Memory Decoder enables effective adaptation of various Qwen and Llama models to three distinct specialized domains: biomedicine, finance, and law, reducing perplexity by an average of 6.17 points. 
-                                Overall, Memory Decoder introduces a novel paradigm centered on a specially pretrained memory component designed for domain-specific adaptation. This memory architecture can be integrated in a plug-and-play manner, 
-                                consistently enhancing performance across multiple models within the target domain.
                         </div>
                     </div>
-                    
+
+                    <!-- How to Synthesize Text Data without Model Collapse? -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <img width="100%" src="./assets/research/model_collapse.png" alt="" srcset="">
+                        </div>
+                        <div class="col-xs-12 col-sm-8">
+                            <h4>
+                                How to Synthesize Text Data without Model Collapse?
+                            </h4>
+                            <p class="author">
+                                Xuekai Zhu, Daixuan Cheng, Hengli Li, Kaiyan Zhang, Ermo Hua, Xingtai Lv, Ning Ding, <span style="font-weight: 500;">Zhouhan Lin#</span>, Zilong Zheng#, Bowen Zhou#
+                            </p>
+                            <div class="link-list">
+                                <span>ICML 2025 </span>
+                                <span> | </span>
+                                <a href="https://arxiv.org/abs/2412.14689"><span>pdf</span></a>
+                                <span> | </span>
+                                <a href="https://github.com/Xuekai-Zhu/toedit"><span>codes</span></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- research 1 -->
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
@@ -275,8 +294,6 @@
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/GraphParsingNetworks"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                Graph pooling compresses graph information into a compact representation. State-of-the-art graph pooling methods follow a hierarchical approach, which reduces the graph size step-by-step. These methods must balance memory efficiency with preserving node information, depending on whether they use node dropping or node clustering. Additionally, fixed pooling ratios or numbers of pooling layers are predefined for all graphs, which prevents personalized pooling structures from being captured for each individual graph. In this work, inspired by bottom-up grammar induction, we propose an efficient graph parsing algorithm to infer the pooling structure, which then drives graph pooling. The resulting Graph Parsing Network (GPN) adaptively learns personalized pooling structure for each individual graph. GPN benefits from the discrete assignments generated by the graph parsing algorithm, allowing good memory efficiency while preserving node information intact. Experimental results on standard benchmarks demonstrate that GPN outperforms state-of-the-art graph pooling methods in graph classification tasks while being able to achieve competitive performance in node classification tasks. We also conduct a graph reconstruction task to show GPN's ability to preserve node information and measure both memory and time efficiency through relevant tests.
                     </div>
                     
                     <!-- research 1 -->
@@ -302,8 +319,6 @@
                                 <span> | </span>
                                 <a href="https://github.com/PussyCat0700/DiVISe"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                Conventional voice conversion modifies voice characteristics from a source speaker to a target speaker, relying on audio input from both sides. However, this process becomes infeasible when clean audio is unavailable, such as in silent videos or noisy environments. In this work, we focus on the task of Silent Face-based Voice Conversion (SFVC), which does voice conversion entirely from visual inputs. i.e., given images of a target speaker and a silent video of a source speaker containing lip motion, SFVC generates speech aligning the identity of the target speaker while preserving the speech content in the source silent video. As this task requires generating intelligible speech and converting identity using only visual cues, it is particularly challenging. To address this, we introduce MuteSwap, a novel framework that employs contrastive learning to align cross-modality identities and minimize mutual information to separate shared visual features. Experimental results show that MuteSwap achieves impressive performance in both speech synthesis and identity conversion, especially under noisy conditions where methods dependent on audio input fail to produce intelligible results, demonstrating both the effectiveness of our training approach and the feasibility of SFVC.
                     </div>
 
                     <!-- research 1 -->
@@ -346,23 +361,18 @@
                                 Chang Su, Dengliang Shi, Siyuan Huang, Jintao Du, Changhua Meng, Yu Cheng, Weiqiang Wang, <span style="font-weight: 500;">Zhouhan Lin#</span>
                             </p>
                             <div class="link-list">
-                                <span>EMNLP 2025 (Main Conference) </span>
+                                <span>EMNLP 2025 </span>
                                 <span> | </span>
                                 <a href="https://aclanthology.org/2025.emnlp-main.216.pdf"><span>pdf</span></a>
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/Anchor-Embedding"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                We propose a simple yet effective approach to enhance the semantic representation of the final token embedding in large language models (LLMs) for text embedding tasks. Existing LLM-based embedding methods often rely on the embedding of a reserved token such as [EOS],
-                                which is not explicitly trained to capture the full context semantics, limiting its effectiveness for retrieval and re-ranking. Our method introduces an additional training stage prior to contrastive learning, employing 
-                                bidirectional generative reconstruction tasks—EBQ2D (Embedding-Based Query-to-Document) and EBD2Q (Embedding-Based Document-to-Query)—to anchor the [EOS] embedding and reconstruct both sides of query-document pairs. 
-                                Experimental results show that our approach significantly improves LLM performance on the Massive Text Embedding Benchmark (MTEB), achieving new state-of-the-art results across multiple LLM base models and scales.
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
-                            <img width="100%" src="./assets/research/reranker.png" alt="Diagram showing the Gumbel Reranking process with a differentiable attention mask over candidate documents." srcset="">
+                            <img width="100%" src="./assets/research/reranker.png" alt="" srcset="">
                         </div>
                         <div class="col-xs-12 col-sm-8">
                             <h4>
@@ -374,25 +384,16 @@
                             <div class="link-list">
                                 <span>ACL 2025 (Main Conference) </span>
                                 <span> | </span>
-                                <a href="https://arxiv.org/abs/2502.11116"><span>arXiv:2502.11116</span></a>
-                                <span> | </span>
-                                <a href="https://aclanthology.org/2025.acl-long.354/"><span>Conference Link (ACL Anthology)</span></a>
+                                <a href="https://arxiv.org/abs/2502.11116"><span>pdf</span></a>
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/Gumbel-Reranking"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                RAG systems rely on rerankers to identify relevant documents. however, fine-tuning these models remains challenging due to the lack of labeled query-document pairs. Existing distillation-based methods suffer from 
-                                training-inference inconsistency and fail to capture inter-document dependencies among candidates. To overcome these limitations, we reframe the reranking process as an attention mask problem and propose Gumbel Reranking, 
-                                an end-to-end training framework for rerankers designed to minimize the training-inference gap. In our approach, reranker optimization is reformulated as learning a stochastic, 
-                                document-level Top-$k$ attention mask using the Gumbel Trick and Relaxed Top-$k$ Sampling. This formulation enables end-to-end optimization by minimizing the overall language loss. 
-                                Experimental results across various settings consistently demonstrate performance gains, including a 10.4% recall improvement for distinguishing indirectly relevant documents on HotpotQA.
-                            </abstract>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
-                            <img width="100%" src="./assets/research/cluster_gt.png" alt="Diagram illustrating the Cluster-wise Graph Transformer architecture with Node-to-Cluster Attention." srcset="">
+                            <img width="100%" src="./assets/research/cluster_gt.png" alt="" srcset="">
                         </div>
                         <div class="col-xs-12 col-sm-8">
                             <h4>
@@ -402,28 +403,18 @@
                                 Siyuan Huang, Yunchong Song, Jiayue Zhou, <span style="font-weight: 500;">Zhouhan Lin#</span>
                             </p>
                             <div class="link-list">
-                                <span>NeurIPS 2024 Spotlight </span>
+                                <span>NeurIPS 2024 (Spotlight) </span>
                                 <span> | </span>
-                                <a href="https://arxiv.org/abs/2410.06746"><span>arXiv:2410.06746</span></a>
-                                <span> | </span>
-                                <span>Conference Link (NeurIPS 2024) - Please check the <a href="https://arxiv.org/abs/2410.06746"><span>arXiv page</span></a> for the official publication details.</span>
+                                <a href="https://arxiv.org/abs/2410.06746"><span>pdf</span></a>
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/Cluster-wise-Graph-Transformer"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                In graph learning, one class of approaches conceptualizes the graph as a hierarchy, utilizing node clustering to capture broader structural information. While often effective, 
-                                these methods typically rely on fixed graph coarsening routines, resulting in overly homogeneous cluster representations and a loss of node-level information. 
-                                In this paper, we envision the graph as a network of interconnected node sets without compressing each cluster into a single embedding. To enable effective information transfer among these node sets, 
-                                we propose the **Node-to-Cluster Attention (N2C-Attn)** mechanism. N2C-Attn incorporates techniques from Multiple Kernel Learning into a kernelized attention framework to effectively capture information at both the node and cluster levels. 
-                                We then leverage a cluster-level message-passing framework to design an efficient form of N2C-Attn that achieves linear time complexity. We further analyze how N2C-Attn combines the dual-level feature maps of queries and keys, 
-                                proving its ability to merge dual-granularity information. The resulting architecture, the **Cluster-wise Graph Transformer (Cluster-GT)**, which uses node clusters as tokens and employs our proposed N2C-Attn module, demonstrates superior performance on various graph-level tasks.
-                            </abstract>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
-                            <img width="100%" src="./assets/research/subtree_attn.png" alt="Diagram showing the Subtree Attention mechanism for Graph Neural Networks." srcset="">
+                            <img width="100%" src="./assets/research/subtree_attn.png" alt="" srcset="">
                         </div>
                         <div class="col-xs-12 col-sm-8">
                             <h4>
@@ -435,19 +426,10 @@
                             <div class="link-list">
                                 <span>NeurIPS 2023 </span>
                                 <span> | </span>
-                                <a href="https://arxiv.org/abs/2310.05296"><span>arXiv:2310.05296</span></a>
-                                <span> | </span>
-                                <a href="https://openreview.net/forum?id=t2hEZadBBk"><span>Conference Link (OpenReview)</span></a>
+                                <a href="https://arxiv.org/abs/2310.05296"><span>pdf</span></a>
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/SubTree-Attention"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                Attention mechanisms have driven significant advancements in graph learning, but they still have notable limitations: local attention struggles to capture long-range information due to the inherent message-passing mechanism, 
-                                while global attention fails to reflect hierarchical neighborhood structures and cannot capture fine-grained local details. In this paper, we propose a novel multi-hop graph attention mechanism called **Subtree Attention (STA)** 
-                                to address these issues. STA seamlessly connects the full attention structure with rooted subtrees and is theoretically proven to approximate global attention in extreme settings. By allowing direct computation of attention weights 
-                                between multi-hop neighbors, STA alleviates the inherent problems of existing graph attention mechanisms. Furthermore, we design an efficient form of STA by employing kernelized Softmax, achieving linear time complexity. 
-                                The resulting GNN architecture, **STAGNN**, presents a simple yet high-performing STA-based Graph Neural Network that utilizes a hop-aware attention strategy. Comprehensive evaluations on ten node classification datasets show that STA-based models outperform existing Graph Transformers and major GNNs.
-                            </abstract>
                         </div>
                     </div>
 
@@ -470,10 +452,6 @@
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/OrderedGNN"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                In this work, we propose to tackle both heterophily and over-smoothing problems by an ordered message passing mecanism, with specific blocks of neurons in a node embedding targeted for messages passed from neighboring nodes that are located within specific
-                                hops. This is achieved by aligning the hierarchy of the rooted-tree of a central node with the ordered neurons in its node representation. SOTA performance in both homophily and heterophily settings without any targeted
-                                design, robust to a wide number of layers, and explainable.
                         </div>
                     </div>
 
@@ -496,11 +474,6 @@
                                 <span> | </span>
                                 <a href="https://github.com/LUMIA-Group/rasat"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                Relational structures such as schema linking and schema encoding have been validated as a key component to qualitatively translating natural language into SQL queries. We propose RASAT: a Transformer seq2seq architecture augmented with relation-aware
-                                self-attention that could leverage a variety of relational structures while still being able to inherit the pretrained parameters from the T5 model effectively. Our model can incorporate almost all types of existing relations
-                                in the literature. Experimental results on three widely used text-to-SQL datasets, covering both single-turn and multi-turn scenarios, have shown that RASAT could achieve state-of-the-art results across all three benchmarks
-                                (75.5% EX on Spider, 52.6% IEX on SParC, and 37.4% IEX on CoSQL).
                         </div>
                     </div>
 
@@ -525,11 +498,6 @@
                                 <span> | </span>
                                 <a href="https://github.com/hantek/distance-parser"><span>codes</span></a>
                             </div>
-                            <abstract>
-                                We propose a novel constituency parsing scheme. The model predicts a vector of real-valued scalars, named syntactic distances, for each split position in the input sentence. The syntactic distances specify the order in which the split points will be selected,
-                                recursively partitioning the input, in a top-down fashion. Compared to traditional shiftreduce parsing schemes, our approach is free from the potential problem of compounding errors, while being faster and easier to parallelize.
-                                Our model achieves competitive performance amongst single model, discriminative parsers in the PTB dataset and outperforms previous models in the CTB dataset.
-                            </abstract>
                         </div>
                     </div>
 
@@ -554,13 +522,6 @@
                                 <!-- <span> | </span> -->
                                 <!-- <a href=""><span>poster</span></a> -->
                             </div>
-                            <abstract>
-                                We propose a neural language model capable of unsupervised syntactic structure induction. The model leverages the structure information to form better semantic representations and better language modeling. Standard recurrent neural networks are limited
-                                by their structure and fail to efficiently use syntactic information. On the other hand, tree-structured recursive networks usually require additional structural supervision at the cost of human expert annotation. In this
-                                paper, We propose a novel neural language model, called the Parsing-Reading-Predict Networks (PRPN), that can simultaneously induce the syntactic structure from unannotated sentences and leverage the inferred structure
-                                to learn a better language model. In our model, the gradient can be directly back-propagated from the language model loss into the neural parsing network. Experiments show that the proposed model can discover the underlying
-                                syntactic structure and achieve state-of-the-art performance on word/character-level language model tasks.
-                            </abstract>
                         </div>
                     </div>
                     <!-- research 4 -->
@@ -584,12 +545,6 @@
                                 <!-- <span> | </span> -->
                                 <!-- <a href=""><span>poster</span></a> -->
                             </div>
-                            <abstract>
-                                We propose a new model for extracting an interpretable sentence embedding by introducing self-attention. Instead of using a vector, we use a 2-D matrix to represent the embedding, with each row of the matrix attending on a different part of the sentence.
-                                We also propose a self-attention mechanism and a special regularization term for the model. As a side effect, the embedding comes with an easy way of visualizing what specific parts of the sentence are encoded into the
-                                embedding. We evaluate our model on 3 different tasks: author profiling, sentiment classification, and textual entailment. Results show that our model yields a significant performance gain compared to other sentence embedding
-                                methods in all of the 3 tasks.
-                            </abstract>
                         </div>
                     </div>
 
@@ -614,13 +569,6 @@
                                 <!-- <span> | </span> -->
                                 <!-- <a href=""><span>poster</span></a> -->
                             </div>
-                            <abstract>
-                                For most deep learning algorithms training is notoriously time consuming. Since most of the computation in training neural networks is typically spent on floating point multiplications, we investigate an approach to training that eliminates the need for
-                                most of these. Our method consists of two parts: First we stochastically binarize weights to convert multiplications involved in computing hidden states to sign changes. Second, while back-propagating error derivatives,
-                                in addition to binarizing the weights, we quantize the representations at each layer to convert the remaining multiplications into binary shifts. Experimental results across 3 popular datasets (MNIST, CIFAR10, SVHN) show
-                                that this approach not only does not hurt classification performance but can result in even better performance than standard stochastic gradient descent training, paving the way to fast, hardwarefriendly training of neural
-                                networks.
-                            </abstract>
                         </div>
                     </div>
 
