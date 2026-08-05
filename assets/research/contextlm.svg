@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">ContextLM architecture</title>
+  <desc id="desc">Token Encoder, Context Predictor, and Token Decoder connected in a hierarchical language model.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef6ff"/>
+      <stop offset="1" stop-color="#f8f2ff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop offset="0" stop-color="#2f80ed"/>
+      <stop offset="1" stop-color="#56ccf2"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" x2="1">
+      <stop offset="0" stop-color="#7b61ff"/>
+      <stop offset="1" stop-color="#bb6bd9"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#667085"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#667085" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <text x="600" y="76" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#1d2939">ContextLM</text>
+  <text x="600" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">Predictive context embeddings for hierarchical language modeling</text>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="278" width="278" height="166" rx="24" fill="white"/>
+    <rect x="461" y="218" width="278" height="286" rx="24" fill="white"/>
+    <rect x="840" y="278" width="278" height="166" rx="24" fill="white"/>
+  </g>
+  <rect x="82" y="278" width="278" height="14" rx="7" fill="url(#blue)"/>
+  <rect x="461" y="218" width="278" height="14" rx="7" fill="url(#purple)"/>
+  <rect x="840" y="278" width="278" height="14" rx="7" fill="url(#blue)"/>
+
+  <text x="221" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2939">Token Encoder</text>
+  <text x="221" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">token-level states</text>
+  <g fill="#dbeafe">
+    <rect x="133" y="402" width="34" height="20" rx="6"/><rect x="175" y="402" width="34" height="20" rx="6"/><rect x="217" y="402" width="34" height="20" rx="6"/><rect x="259" y="402" width="34" height="20" rx="6"/>
+  </g>
+
+  <text x="600" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2939">Context Predictor</text>
+  <text x="600" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">next-context prediction</text>
+  <path d="M520 390 C550 350 580 430 610 390 S670 350 700 390" fill="none" stroke="#7b61ff" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="520" cy="390" r="13" fill="#7b61ff"/><circle cx="610" cy="390" r="13" fill="#9b72ef"/><circle cx="700" cy="390" r="13" fill="#bb6bd9"/>
+  <text x="600" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#667085">latent context embeddings</text>
+
+  <text x="979" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2939">Token Decoder</text>
+  <text x="979" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">context-guided generation</text>
+  <g fill="#dbeafe"><rect x="891" y="402" width="34" height="20" rx="6"/><rect x="933" y="402" width="34" height="20" rx="6"/><rect x="975" y="402" width="34" height="20" rx="6"/><rect x="1017" y="402" width="34" height="20" rx="6"/></g>
+
+  <path d="M360 361 H450" fill="none" stroke="#667085" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M739 361 H829" fill="none" stroke="#667085" stroke-width="5" marker-end="url(#arrow)"/>
+  <path d="M600 504 V592 H221 V454" fill="none" stroke="#7b61ff" stroke-width="4" stroke-dasharray="12 10" marker-end="url(#arrow)"/>
+  <text x="600" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#475467">standard autoregressive evaluation remains compatible</text>
+</svg>
